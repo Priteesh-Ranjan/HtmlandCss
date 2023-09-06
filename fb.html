@@ -1,0 +1,71 @@
+<!DOCTYPE  html>
+<html>
+<head>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+	<title> Welcome to FB </title>
+	<link rel = "stylesheet" href = "desiging_style.css">
+	<script src="https://kit.fontawesome.com/b5253ac70a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+	</div>
+	<div class="form-box">
+		<h1 id = "title"> Welcome to FB </h1>
+		<form>
+			<div class="input-group">
+				<div class="input-field" id = "nameField">
+					<i class = "fa-solid fa-user"></i>
+					<input type="text" placeholder="Name">
+				</div>
+
+				<div class="input-field">
+					<i class = "fa-solid fa-envelope"></i>					
+					<input type="email" placeholder="Email ">
+				</div>
+
+				<div class="input-field">
+					<i class = "fa-solid fa-lock"></i>	
+					<input type="password" placeholder="Password">
+				</div>
+
+				<div class="check-field">
+					<input type="checkbox" id="remember" name="remember">
+					<label for="remember">Remember Me</label>
+				</div>
+			</div>
+			<div class="btn-field">
+				<button type="button" id = "signupBtn"> Sign Up </button>			
+			</div>
+			<div class="btn-field">	
+				<p> Already had an account? </p>
+				<button type="button" id = "signinBtn" class = "disable" > Sign In </button>			
+			</div>
+
+		</form>	
+	</div>
+
+	
+<script>
+	let signinBtn = document.getElementById("signinBtn");
+	let signupBtn = document.getElementById("signupBtn");
+	let nameField = document.getElementById("nameField");
+	let title = document.getElementById("title");
+
+signupBtn.onclick = function(){
+	nameField.style.maxheight = "65px";
+	title.innerHTML = "Create an Account";
+	signupBtn.classList.remove("disable");
+	signinBtn.classList.add("disable")
+}
+
+signinBtn.onclick = function(){
+	nameField.style.maxheight = "0px";
+	title.innerHTML = "Login to Your account";
+	signupBtn.classList.add("disable");
+	signinBtn.classList.remove("disable")
+}
+</script>
+
+</body>
+</html>
